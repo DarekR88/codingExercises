@@ -14,4 +14,17 @@ module.exports.run = function(csv){
 	Write your code below the comment.
 */
 
+let resArray = []
+let newArray = csv.split(/\r?\n/)
+let keys = newArray[0].split(',')
+for (let i=1; i<newArray.length; i++){
+	let valueArray = newArray[i].split(',')
+	let cvsObj = {}
+	for (let j=0; j<keys.length; j++){
+		cvsObj[keys[j]] = valueArray[j]
+	}
+	resArray.push(cvsObj)
+}
+return resArray
+
 };

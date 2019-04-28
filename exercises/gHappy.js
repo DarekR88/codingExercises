@@ -9,4 +9,7 @@ A lowercase 'g' in a string is "happy" if there is another 'g' immediately to it
         Write your code below the comment.
 */
 
+const regex = /([^g]|\s)g([^g]|$)/ ;
+return(!regex.test(str))
+
 };
